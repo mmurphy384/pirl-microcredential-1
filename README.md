@@ -1,4 +1,6 @@
 # pirl-microcredential
+
+## Background Information
 This is a B-to-B contract that allows an authorizing agent to receive micro-credential validation requests.  For example, in certain industries, employees are encouraged to obtain "Micro-Credentials".  A micro-credential is a small certification that indicates you have mastered a small skill.  If we take K12 education, as an example:
 
 A school district might create a micro-credentail specification for "Classroom Management" that would require the teacher to:
@@ -31,3 +33,19 @@ Fortunately, there is a specification that outlines how these micro-credentials 
 This smart contract will create a relationship between the authorizing agency's wallet address and the districts wallet address.  This wil allow the district to add a micro-credentail along with supporting files for a particular educator.  The authorizing agency will then review the work and see how it aligns to their best-practice specification.  Once approved, the user will have a link they can share with anyone in the world, that validates they've received a worthy micro-credential from an established authorizing agency.
 
 
+##Proposed Contract Files
+* /MicroCredential.sol - Main point of entry.  Each authorizing agent will own the contract.
+* /Subscribers.sol - This is where a school district will add their address and name.
+* /Credentials.sol - This is where a school district will add a credential
+* /Files.sol - This is where a school district will add the supporting evidence for a given credential.
+* /Common.sol - Common utility functions
+
+
+##Milestones / Timeline
+* Re-Learn Solidity Development
+* Create skeleton structure of contract and library files
+* Create/understand development environment
+* Write tests for the various functions
+* Build out contracts
+* Build UI
+* Test
