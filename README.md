@@ -1,7 +1,7 @@
 # pirl-microcredential
 
 ## Background Information
-This is a B-to-B contract that allows an authorizing agent to receive micro-credential validation requests.  For example, in certain industries, employees are encouraged to obtain "Micro-Credentials".  A micro-credential is a small certification that indicates you have mastered a small skill.  If we take K12 education, as an example:
+This is a B-to-B Pirl Smart Contract that allows an authorizing agent to receive micro-credential validation requests.  For example, in certain industries, employees are encouraged to obtain "Micro-Credentials".  A micro-credential is a small certification that indicates you have mastered a small skill.  If we take K12 education, as an example:
 
 A school district might create a micro-credentail specification for "Classroom Management" that would require the teacher to:
 * Attend 2 particular professional development classes.
