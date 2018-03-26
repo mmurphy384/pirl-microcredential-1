@@ -1,8 +1,8 @@
-pragma solidity ^0.4.19
+pragma solidity ^0.4.19;
 
+import "./Subscriber.sol";
 
 contract Credential {
-
 
     // Events
     event NewCredential(uint userId, uint credentialId, string credentialTitle);
@@ -63,12 +63,11 @@ contract Credential {
  
     function Approve(string _subscriberPk, string _message) public returns (bool) {
         uint subscriberId = subscriberMapping[msg.sender];
-        uint id = 0;
         if (subscriberId > 0) {
             uint key = _getCredentialKey(subscriberId,_subscriberPk);
             // ugh.  Loop through the array to find the credential and update the status/message
         }
-        return (id>0);
+        return (true);
     }   
 
     function Deny(string _subscriberPk, string _message) public returns (bool) {
@@ -78,7 +77,7 @@ contract Credential {
             uint key = _getCredentialKey(subscriberId,_subscriberPk);
             // ugh.  Loop through the array to find the credential and update the status/message
         }
-        return (id>0);
+        return (true);
     }  
  
     // Private Functions
@@ -88,3 +87,4 @@ contract Credential {
     } 
     
 }
+
