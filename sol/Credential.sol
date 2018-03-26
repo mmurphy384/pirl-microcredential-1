@@ -3,6 +3,7 @@ pragma solidity ^0.4.19
 
 contract Credential {
 
+
     // Events
     event NewCredential(uint userId, uint credentialId, string credentialTitle);
     event ApprovedCredential(uint credentialId, uint userId, string credentialTitle, string message);
@@ -59,6 +60,26 @@ contract Credential {
         }
         return (id>0);
     }     
+ 
+    function Approve(string _subscriberPk, string _message) public returns (bool) {
+        uint subscriberId = subscriberMapping[msg.sender];
+        uint id = 0;
+        if (subscriberId > 0) {
+            uint key = _getCredentialKey(subscriberId,_subscriberPk);
+            // ugh.  Loop through the array to find the credential and update the status/message
+        }
+        return (id>0);
+    }   
+
+    function Deny(string _subscriberPk, string _message) public returns (bool) {
+        uint subscriberId = subscriberMapping[msg.sender];
+        uint id = 0;
+        if (subscriberId > 0) {
+            uint key = _getCredentialKey(subscriberId,_subscriberPk);
+            // ugh.  Loop through the array to find the credential and update the status/message
+        }
+        return (id>0);
+    }  
  
     // Private Functions
     function _getCredentialKey(uint _subscriberId, string _subscriberPk) private pure returns (uint) {
