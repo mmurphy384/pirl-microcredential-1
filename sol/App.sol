@@ -1,16 +1,15 @@
 pragma solidity ^0.4.19;
 
-import "./MyUtils.sol";
 import "./Credential.sol";
 
-contract Microcredential {
+contract App is Credential {
 
     // State Variables
     string ownerName;
     address wallet;
 
     // Constructor
-    function Microcredential(string _ownerName) {
+    function App(string _ownerName) {
         ownerName = _ownerName;
         wallet = msg.sender;
     }
@@ -19,7 +18,6 @@ contract Microcredential {
     function ChangeOwnerName(string _ownerName) {
         require (wallet = msg.sender);
         ownerName = _ownerName;
-        
     }
 
     function Destroy() public returns (string) {
