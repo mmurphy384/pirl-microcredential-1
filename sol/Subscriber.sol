@@ -20,7 +20,7 @@ contract Subscriber {
     mapping(address => uint) public orgMapping;
     
     // Public functions
-    function AddSubscriber(string _name) public returns (string) {
+    function AddOrganization(string _name) public returns (string) {
         require(orgMapping[msg.sender]==0);
         uint id = orgs.push(Organization(orgs.length + 1,msg.sender, _name))-1;
         orgMapping[msg.sender] = id;
