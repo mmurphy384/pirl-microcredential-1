@@ -36,9 +36,9 @@ This smart contract will create a relationship between the authorizing agency's 
 ## Proposed Contract Files
 * /MicroCredential.sol - Main point of entry.  Each authorizing agent will own the contract.
 * /Subscribers.sol - This is where a school district will add their address and name.
-* /Credentials.sol - This is where a school district will add a credential
+* /Credentials.sol - This is where a school district will add a credential that needs to be reviewed.
 * /Files.sol - This is where a school district will add the supporting evidence for a given credential.
-* /Common.sol - Common utility functions
+* /MyUtils.sol - Common utility functions
 
 
 ## Milestones / Timeline
