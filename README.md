@@ -33,7 +33,7 @@ Fortunately, there is a specification that outlines how these micro-credentials 
 This smart contract will create a relationship between the authorizing agency's wallet address and the districts wallet address.  This wil allow the district to add a micro-credentail along with supporting files for a particular educator.  The authorizing agency will then review the work and see how it aligns to their best-practice specification.  Once approved, the user will have a link they can share with anyone in the world, that validates they've received a worthy micro-credential from an established authorizing agency.
 
 
-##Proposed Contract Files
+## Proposed Contract Files
 * /MicroCredential.sol - Main point of entry.  Each authorizing agent will own the contract.
 * /Subscribers.sol - This is where a school district will add their address and name.
 * /Credentials.sol - This is where a school district will add a credential
@@ -41,7 +41,7 @@ This smart contract will create a relationship between the authorizing agency's 
 * /Common.sol - Common utility functions
 
 
-##Milestones / Timeline
+## Milestones / Timeline
 * Re-Learn Solidity Development
 * Create skeleton structure of contract and library files
 * Create/understand development environment
@@ -49,3 +49,7 @@ This smart contract will create a relationship between the authorizing agency's 
 * Build out contracts
 * Build UI
 * Test
+
+
+## Team
+Michael Murphy - Developer / Product Manager
