@@ -30,7 +30,7 @@ Fortunately, there is a specification that outlines how these micro-credentials 
 </root>
 ```
 
-This smart contract will create a relationship between the authorizing agency's wallet address and the districts wallet address.  This wil allow the district to add a micro-credentail along with supporting files for a particular educator.  The authorizing agency will then review the work and see how it aligns to their best-practice specification.  Once approved, the user will have a link they can share with anyone in the world, that validates they've received a worthy micro-credential from an established authorizing agency.
+This smart contract will create a relationship between the authorizing agency's wallet address and the districts wallet address.  This wil allow the district to submit a micro-credentail review (including supporting files) for a particular educator.  The authorizing agency will then review the work and see how it aligns to their best-practice specification.  Once approved, the user will have a link they can share with anyone in the world, that validates they've received a worthy micro-credential from an established authorizing agency.
 
 
 ## Proposed Contract Files
