@@ -12,6 +12,7 @@ The glaring problem in all of this is that every district creates their own requ
 
 Fortunately, there is a specification that outlines how these micro-credentials are organized in a standardized way.  A simple XML file is use to define the requirements and hold the list of things that were done.  In a simplified manner, this looks like:
 
+```xml
 <root>
   <title>Classroom Management</title>
   <requirements>
@@ -25,6 +26,7 @@ Fortunately, there is a specification that outlines how these micro-credentials 
     <blah>Blah</blah>
   </educator>
 </root>
+```
 
 This smart contract will create a relationship between the authorizing agency's wallet address and the districts wallet address.  This wil allow the district to add a micro-credentail along with supporting files for a particular educator.  The authorizing agency will then review the work and see how it aligns to their best-practice specification.  Once approved, the user will have a link they can share with anyone in the world, that validates they've received a worthy micro-credential from an established authorizing agency.
 
