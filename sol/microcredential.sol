@@ -1,5 +1,7 @@
 pragma solidity ^0.4.19;
 
+// TO DO: This big ugly thing will be broken apart once I figure out how to do it
+
 contract Microcredential {
 
     // Events
