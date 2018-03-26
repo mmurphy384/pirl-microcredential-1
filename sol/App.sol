@@ -6,17 +6,9 @@ import "./Credential.sol";
 
 contract Microcredential {
 
-    // Events
-
     // State Variables
     string ownerName;
     address wallet;
-    
-    // Structs
-
-    // Arrays
-
-    // Mappings
 
     // Constructor
     function Microcredential(string _ownerName) {
@@ -28,7 +20,6 @@ contract Microcredential {
     function ChangeOwnerName(string _ownerName) {
         require (wallet = msg.sender);
         ownerName = _ownerName;
-        
     }
 
     function Destroy() public returns (string) {
