@@ -1,29 +1,29 @@
-pragma solidity ^0.4.19
+pragma solidity ^0.4.19;
 
 
 contract Subscriber {
 
+    // Events
     event NewSubscriber(uint userId, string userKey, string userName, string userSponsor);
     
     // Structs
-    struct Subscriber {
+    struct Organization {
         uint id;
         address wallet;
         string name;
     }    
 
     // Arrays
-    Subscriber[] private subscribers;
+    Organization[] private orgs;
     
     // Mappings
-    mapping(address => uint) public subscriberMapping;
-    
+    mapping(address => uint) public orgMapping;
     
     // Public functions
     function AddSubscriber(string _name) public returns (string) {
-        require(subscriberMapping[msg.sender]==0);
-        uint id = subscribers.push(Subscriber(subscribers.length + 1,msg.sender, _name))-1;
-        subscriberMapping[msg.sender] = id;
+        require(orgMapping[msg.sender]==0);
+        uint id = orgs.push(Organization(orgs.length + 1,msg.sender, _name))-1;
+        orgMapping[msg.sender] = id;
         return "success";
     }    
     
