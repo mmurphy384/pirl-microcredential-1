@@ -1,7 +1,6 @@
 pragma solidity ^0.4.19;
 
 import "./MyUtils.sol";
-import "./Subscriber.sol";
 import "./Credential.sol";
 
 contract Microcredential {
@@ -20,6 +19,7 @@ contract Microcredential {
     function ChangeOwnerName(string _ownerName) {
         require (wallet = msg.sender);
         ownerName = _ownerName;
+        
     }
 
     function Destroy() public returns (string) {
