@@ -1,6 +1,7 @@
 pragma solidity ^0.4.19;
 
-import "./Credential.sol";
+import "./credential.sol";
+import "./ownable.sol";
 
 contract App is Credential, Ownable {
 
