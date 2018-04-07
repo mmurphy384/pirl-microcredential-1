@@ -78,4 +78,10 @@ Gas Limit
 Listening on localhost:8545
 ```
 
-At this point, you can configure Visual Studio (or any other server) to deploy to this endpoint/port.   Once I figure that part out, I'll add to this guide.
+## Configure Visual Studeo to deploy to localhost:8545
+  * browse to your folder that contains the project/solution
+  * open the .solproj file using a text editor
+  * Update the BlockChainServiceUrl to appear as noted below
+  ``` xml
+      <BlockchainServiceUrl>http://localhost:8545/</BlockchainServiceUrl>
+  ```
