@@ -65,7 +65,7 @@ Background:  The contract will be instantiated by the agency/organization that w
     file to the content/file repo.
     * Somewhere in here, we have to collect the fee (in Pirl)
 
-## Teacher Deletes a Request
+## Teacher Deletes an 'in-progress' Request
   * See "Teacher Browses Their Account" use case
   * Teacher clicks the delete button.
   * Teacher is prompted with an "Are You Sure" 
