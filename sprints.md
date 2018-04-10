@@ -13,14 +13,13 @@
       * Mike to create basic use-cases.
       * James and Jonathan to review and help refine.
       * Generate a list of risks/unknowns.
-
-
---------------------------------------------------------------------------------------------------------
-## Next Sprint
   * Build folder and file structure with blank functions.  
     * Acceptance Criteria: 
       * Create a file called /proposed-file-structure.md
       * Review with the team for input
+
+--------------------------------------------------------------------------------------------------------
+## Next Sprint
   * Review basic UI/UX needs
     * Acceptance Criteria:
       * Pick a tech stack
