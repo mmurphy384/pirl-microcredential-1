@@ -47,6 +47,7 @@ TO BE COMPLETED
 
 
 ## Team
-@CableGod - Developer
-@kurret - Developer
-@mmurphy384 - Developer / Product Manager
+  * @CableGod - Developer
+  * @kurret - Developer
+  * @mmurphy384 - Developer / Product Manager
+    * I'm a well-aged developer that has gotten through the cynical phase.  I'm a better project manager than a developer, so I'll probably stick to that role as we navigate through this project.  I spent most of my career in legacy technologies, but have dabbled in enough of the new stuff to talk a good game.  I live in the US in Severna Park, Maryland.  It's about a 30 minute drive to Washington DC.  I'm GMT - 4.
