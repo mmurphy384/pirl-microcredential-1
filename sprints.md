@@ -28,6 +28,9 @@
     * Acceptance Criteria:
       * Decide if we should just assume the user has Meta Mask to take the easy way out.
       * Decide some other way that a regular human will be able to figure this all out.
+  * Project Review
+    * Acceptance Criteria:
+      * At this point, we should have a feel for what the project is and some of the emerging difficulties.  It might be healthy to have a 'go' or 'no-go' decision.  I'm not married to this idea, so if we want to do something else, this might be the time.
 
 
 
