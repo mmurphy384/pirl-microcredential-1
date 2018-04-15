@@ -1,33 +1,46 @@
 pragma solidity ^0.4.19;
 
+
+
+
 contract App  {
 
 
-  string nameOfAgency;
-  string agencyDescription;
-  string addressOfAgency;
-  string websiteOfAgency;
-  string emailOfAgency;
+    string nameOfAgency;
+    string agencyDescription;
+    string addressOfAgency;
+    string websiteOfAgency;
+    string emailOfAgency;
     address owner;
     address creator;
 
-  modifier onlyOwner() {
-    require(msg.sender == owner);
-    _;
-  }
+    modifier onlyOwner() {
+        require(msg.sender == owner);
+        _;
+    }
 
-  struct Credential {
-    bytes32 requirements;
-    bytes32 name;
+    struct Credential {
+        bytes32 requirements;
+        bytes32 name;
+        bool active;
+    }
 
-    bool received;
-    bool approved;
-    uint blockApproved;
-    uint timeApproved;
 
-  }
+    struct CredentialApplication {
+        bytes32 requirements;
+        bytes32 name;
+        uint typeOfCredential;
 
-  Credential[] credentials;
+        bool received;
+        bool approved;
+        uint blockApproved;
+        uint timeApproved;
+
+    }
+
+    Credential[] credentialList;
+
+  CredentialApplication[] credentials;
 
   event CredentialSubmitted(address sender, uint credentialNumber);
   event CredentialReceived(address sender, uint credentialNumber);
@@ -45,7 +58,9 @@ contract App  {
     return creator;
   }
 
-  function submitMicroCredential() public returns (bool){
+  function submitMicroCredential(uint cred) public returns (bool){
+    require(cred<credentialList.length);
+    require(credentialList[cred].active==true);
     //submitting a credential should include some documentation/photos, right?
     //this could be a great usecase for the Pirl masternode system, namely the masternodes 
     //will store the files for a period of time, at least until the agency has fetched the data themselves
@@ -56,14 +71,30 @@ contract App  {
     CredentialSubmitted(msg.sender,credentials.length-1);
   }
 
+    function createCredential(bytes32 requirements, bytes32 name) public onlyOwner returns (bool){
+        Credential memory cred = Credential(requirements,name,true);
+        credentialList.push(cred);
+        return true;
 
+    }
+
+
+    function disableCredential(uint cred) public onlyOwner returns (bool){
+        require(cred<credentialList.length);
+        credentialList[cred].active=false;
+    }
+
+    function enableCredential(uint cred) public onlyOwner returns (bool){
+        require(cred<credentialList.length);
+        credentialList[cred].active=true;
+    }
 
   function credentialReceived(uint index) public onlyOwner returns (bool){
 
   }
 
 
-  function approveMicroCredential(uint index) onlyOwner returns (bool) {
+  function approveCredential(uint index) onlyOwner returns (bool) {
     require(index<credentials.length);
     require(!credentials[index].approved);
     credentials[index].approved=true;
